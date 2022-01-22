@@ -1,15 +1,18 @@
 <template>
   <div>
     <section class="home">
-
+      <Exchange />
     </section>
   </div>
 </template>
 
 <script>
-
+import Exchange from '@/components/Exchange'
 export default {
-  layout: 'default'
+  layout: 'default',
+  components: {
+    Exchange
+  }
 }
 </script>
 
@@ -23,7 +26,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
 </style>
