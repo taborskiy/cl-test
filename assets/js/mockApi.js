@@ -65,4 +65,8 @@ export const mockApi = class {
     }))
     return this._simulateAsyncCall(exchangeRates)
   }
+
+  getCurrenciesList() {
+    return this._simulateAsyncCall(this.currencies)
+  }
 }
