@@ -1,0 +1,36 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+
+.container {
+  width: 1560px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  &--fluid {
+    width: 100%;
+  }
+}
+
+.page-wrapper {
+  padding-top: 65px;
+  padding-bottom: 50px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 34px;
+  color: #252525;
+}
+
+.page-content {
+  font-size: 14px;
+  color: #252525;
+}
