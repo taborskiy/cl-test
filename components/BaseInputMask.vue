@@ -3,6 +3,7 @@
     input.base-input__input(
       v-model="inputModel"
     )
+    //-       v-mask="decimal"
 </template>
 
 <script>
@@ -20,7 +21,25 @@ export default {
         return this.value
       },
       set(value) {
-        this.$emit('input', value)
+        const reg = /^\d*\.?\d*$/
+        if(reg.test(value)) {
+          this.$emit('input', +value)
+        } else {
+          this.$emit('input', value)
+        }
+      }
+    }
+  },
+  methods: {
+    decimal(value) {
+      const reg = /^\d*\.?\d*$/
+      if(reg.test(value)) {
+        return value.split()  // plugin wait arr
+      } else {
+        // const popped = value.split('')  // mask logic need debag, if validation bad clear input value
+        // popped.pop()
+        // return popped
+        return []
       }
     }
   }
